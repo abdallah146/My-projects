@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 60px; /* Add space to prevent overlap with navbar */
+}
+
+header {
+    background-color: #808080; /* Grey color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+#header-img {
+    max-width: 150px; 
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Align image to the top left corner on large screens */
+    transition: left 0.3s ease, top 0.3s ease;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    padding-top: 20px; /* Space between image and title */
+}
+
+#form {
+    margin-top: 20px;
+}
+
+#email {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #4cae4c;
+}
+
+/* Navigation Bar - positioned at top */
+#nav-bar {
+    position: fixed; /* Fix the nav bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #808080; /* Grey background for better visibility */
+    z-index: 1000; /* Ensure navbar stays on top */
+    padding: 10px 0; /* Add padding to prevent overlap */
+}
+
+#nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar li {
+    margin: 0 15px;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#nav-bar a:hover {
+    color: #ffcc00;
+}
+
+/* Features Section */
+#Features {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#Features h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#Features ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#Features li {
+    font-size: 18px;
+    width: 250px;
+    text-align: left;
+}
+
+/* Video Section */
+#skill {
+    text-align: center;
+    padding: 20px;
+}
+
+#video {
+    max-width: 100%;
+    border: none;
+}
+
+/* Pricing Section */
+#pricing {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#pricing h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pricing-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 30%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+}
+
+.pricing-item h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5cb85c;
+    margin-bottom: 15px;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.select {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.select:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Ensure enough space for the fixed navbar */
+    }
+
+   
+    #header-img {
+      
+        left: 50%; 
+        position:relative ;
+        top: 10px; 
+        max-width: 150px; 
+        transform: translateX(-50%); 
+        display: block; 
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    #email, #submit {
+        width: 80%;
+        margin-right: 0;
+        margin-top: 5px; 
+    }
+
+
+    #form {
+        margin-top: 10px; 
+    }
+
+   
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-item {
+        width: 80%;
+    }
+
+    /* Stack navigation items vertically */
+    #nav-bar ul {
+        flex-direction: column;
+    }
+
+    #nav-bar li {
+        margin: 10px 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
